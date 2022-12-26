@@ -6,7 +6,8 @@
     margin-bottom: 20px;
     /* border: 1px lightgray solid; */
 }
-.book-add-review h2{
+
+.book-add-review h2 {
     font-size: 2rem;
     /* color: var(--gray1); */
     width: 50%;
@@ -14,6 +15,7 @@
     padding: 10px;
     background-color: var(--clr1);
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .book-add-review input {
@@ -22,14 +24,16 @@
     border-radius: 3px;
     transition: width 0.4s ease-in-out;
     /* width: 20%; */
-    outline: 2px var(--gray1) solid;
+    outline: 0px var(--gray1) solid;
     border: 0;
     padding: 10px;
+    background-color: var(--clr2bg-light);
+    font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
 .book-add-review input:focus {
     /* width: 55%; */
-    outline: 2px var(--gray2) solid;
+    outline: 0px var(--gray2) solid;
     background-color: rgb(255, 255, 255);
 }
 
@@ -53,4 +57,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.add-review-btn {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    padding: 10px;
+    width: 50%;
+    transition: 0.5s;
+    background-color: var(--clr2bg-light);
+    font-size: 1.25rem
+}
+
+.add-review-btn:hover {
+    color: black;
+    background-color: white;
 }

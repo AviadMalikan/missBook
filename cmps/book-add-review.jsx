@@ -32,7 +32,7 @@ export function BookAddReview({ book }) {
                 <input type="text"
                     id="userName"
                     name="txt"
-                    placeholder="Your name"
+                    placeholder="ex Puki..."
                     // value={}
                     onChange={handleEvent}
                 />
@@ -61,7 +61,7 @@ export function BookAddReview({ book }) {
                     />
                 </div>
             </div>
-            <button>Add!</button>
+            <button className="add-review-btn">Add!</button>
 
         </form>
 

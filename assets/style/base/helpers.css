@@ -27,11 +27,11 @@
 }
 
 .red-text {
-    color: red;
+    color: rgb(231 78 58);
 }
 
 .red-bg {
-    background-color: red;
+    background-color: rgb(231 78 58);
 }
 
 /* list helpers */
