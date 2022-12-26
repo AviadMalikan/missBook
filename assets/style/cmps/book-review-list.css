@@ -1,0 +1,34 @@
+.book-reviews-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.book-reviews-container h2 {
+    font-size: 2rem;
+    /* color: var(--gray1); */
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: var(--clr1);
+    border-radius: 5px;
+}
+
+.book-reviews-container table {
+    margin: auto;
+    /* border: 1px solid var(--clr1bg); */
+    border-radius: 3px;
+}
+
+.book-reviews-container table td {
+    padding: 5px;
+}
+
+.book-reviews-container table td span {
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+

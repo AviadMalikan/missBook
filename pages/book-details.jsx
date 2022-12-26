@@ -3,7 +3,7 @@ const { useParams, Link, useNavigate } = ReactRouterDOM
 
 import { bookService } from "../services/book.service.js"
 import { BookAddReview } from "../cmps/book-add-review.jsx"
-import { BookReviews } from "../cmps/book-reviews.jsx"
+import { BookReviewsList } from "../cmps/book-review-list.jsx"
 
 export function BookDetail() {
     const [book, setBook] = useState(null)
@@ -53,16 +53,18 @@ export function BookDetail() {
 
             <h2>Description:</h2>
             <p>{book.description}</p>
-            <h3 className={"price-container " + (book.listPrice.isOnSale ? '' : '')}>
+            <h3 className={"price-container " + (book.listPrice.isOnSale ? 'red-text' : '')}>
                 Price:
                 <span > {book.listPrice.amount}</span>
                 <span className="price"> {book.listPrice.currencyCode}</span>
             </h3>
 
+
         </section>
-        <BookAddReview />
-        
-        <BookReviews />
+
+        <BookAddReview book={book} />
+
+        <BookReviewsList book={book} />
 
     </section>
 }
