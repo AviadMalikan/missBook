@@ -1,0 +1,11 @@
+.books-index h1 {
+    font-size: 2rem;
+}
+
+.books-index {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    background-color: var(--clr2bg-light);
+    /* border: 2px solid var(--gray1); */
+}

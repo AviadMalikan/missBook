@@ -1,0 +1,21 @@
+.app-header {
+  background-color: var(--clr1);
+  color: var(--clr1bg);
+  padding: 1em;
+  color: var(--clr2bg);
+  margin-bottom: 50px;
+}
+
+@media(max-width: 720px) {
+  .app-header {
+    color: var(--clr2bg);
+  }
+}
+
+a:not(:last-child) {
+  margin-inline-end: 30px;
+}
+
+.active {
+  box-shadow: 0 5px 0 var(--clr2bg);
+}

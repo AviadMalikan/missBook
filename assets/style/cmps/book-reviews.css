@@ -1,0 +1,10 @@
+.book-reviews-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+}
+
+.book-reviews-container h2 {
+    font-size: 2rem;
+}

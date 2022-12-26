@@ -1,0 +1,47 @@
+.book-add-review {
+    padding: 20px;
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    /* border: 1px lightgray solid; */
+}
+
+.book-add-review input {
+    text-align: center;
+    margin: 10px;
+    border-radius: 3px;
+    transition: width 0.4s ease-in-out;
+    /* width: 20%; */
+    outline: 2px var(--gray1) solid;
+    border: 0;
+    padding: 10px;
+}
+
+.book-add-review input:focus {
+    /* width: 55%; */
+    outline: 2px var(--gray2) solid;
+    background-color: rgb(255, 255, 255);
+}
+
+.name-input,
+.date-input,
+.rate-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-input input {
+    width: 230px;
+}
+
+.name-input input:focus {
+    width: 230px;
+}
+
+.second-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

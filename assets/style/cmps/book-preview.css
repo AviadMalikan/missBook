@@ -1,0 +1,32 @@
+.book-card {
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.book-card img {
+    width: 200px;
+}
+
+/* .book-card1 {
+
+} */
+
+.book-card h2 {
+    text-transform: capitalize;
+    margin: 0;
+    height: 60px;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.book-card h3 .price {
+    font-size: 0.70rem;
+
+}
+
+/* .card-content {} */
+

@@ -1,0 +1,54 @@
+.book-details .sale {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 0;
+    top: -50px
+}
+
+.book-details .price-containe {
+    margin-bottom: 70px;
+}
+
+.go-back-btn {
+    border-radius: 2rem;
+    background-color: var(--clr1);
+    color: var(--clr2bg);
+    padding: 20px;
+    position: fixed;
+    bottom: 100px;
+    right: 0px;
+    transition: .5s;
+}
+.go-back-btn:hover{
+    padding: 25px;
+    background-color: var(--clr1bg);
+}
+
+.book-details {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background-color: var(--clr2bg-light);
+}
+
+.book-details h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.book-content {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.book-header {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--clr2bg);
+    border-radius: 5px;
+    /* border: 1px lightgray solid; */
+}
