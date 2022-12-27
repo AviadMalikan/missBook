@@ -1,7 +1,7 @@
 .book-add-review {
     margin: 10px;
     padding: 20px;
-    background-color: var(--clr2bg);
+    background-color: var(--clr2bg-light);
     border-radius: 5px;
     margin-bottom: 20px;
     /* border: 1px lightgray solid; */
@@ -13,7 +13,7 @@
     width: 50%;
     margin: 10px auto;
     padding: 10px;
-    background-color: var(--clr1);
+    background-color: var(--clr1bg);
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -27,14 +27,14 @@
     outline: 0px var(--gray1) solid;
     border: 0;
     padding: 10px;
-    background-color: var(--clr2bg-light);
     font-family: 'Edu VIC WA NT Beginner', cursive;
+    background-color: var(--gray1);
 }
 
 .book-add-review input:focus {
     /* width: 55%; */
-    outline: 0px var(--gray2) solid;
     background-color: rgb(255, 255, 255);
+    outline: 0px var(--gray2) solid;
 }
 
 .name-input,
@@ -63,13 +63,14 @@
 .add-review-btn {
     font-family: 'Edu VIC WA NT Beginner', cursive;
     padding: 10px;
-    width: 50%;
+    width: 30%;
     transition: 0.5s;
-    background-color: var(--clr2bg-light);
+    background-color: var(--gray1);
+    /* background-color: var(--clr1bg-light); */
     font-size: 1.25rem
 }
 
 .add-review-btn:hover {
     color: black;
-    background-color: white;
+    background-color: var(--clr1bg);
 }

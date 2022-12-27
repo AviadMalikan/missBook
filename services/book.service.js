@@ -11,6 +11,8 @@ export const bookService = {
     save,
     // getEmptyBook,
     getDefaultFilter,
+    getNextBookId,
+    getPrevBookId,
     getEmptyReview,
     addReview,
 }
@@ -46,9 +48,6 @@ function save(book) {
     }
 }
 
-// function getEmptyBook(vendor = '', maxSpeed = '') {
-//     return { id: '', vendor, maxSpeed }
-// }
 
 function getDefaultFilter() {
     return { txt: '', maxPrice: '' }
@@ -504,40 +503,35 @@ function _createBooks() {
 }
 
 function getEmptyReview() {
-    return { txt: '', rate: '', date: '' }
+    return { fullName: '', rate: '', readAt: '' }
 }
 
 function addReview(book, review) {
+    review.id = utilService.makeId()
     if (book.reviews) book.reviews.push(review)
     else book.reviews = [review]
     console.log('book  : ', book)
 
-
     return storageService.put(BOOK_KEY, book)
 }
 
-// "id": "OXeMG8wNskc",
-// "title": "metus hendrerit",
-// "subtitle": "mi est eros convallis auctor arcu dapibus himenaeos",
-// "authors": [
-//     "Barbara Cartland"
-// ],
-// "publishedDate": 1999,
-// "description": "placerat nisi sodales suscipit tellus tincidunt mauris elit sit luctus interdum ad dictum platea vehicula conubia fermentum habitasse congue suspendisse",
-// "pageCount": 713,
-// "categories": [
-//     "Computers",
-//     "Hack"
-// ]
-// "reviews":[
-//     {
-//         fullname
-//         rating
-//         readat
-//     }
-// ],
 
-
+function getNextBookId(bookId) {
+    return storageService.query(BOOK_KEY)
+        .then(books => {
+            var idx = books.findIndex(book => book.id === bookId)
+            if (idx === books.length - 1) idx = -1
+            return books[idx + 1].id
+        })
+}
+function getPrevBookId(bookId) {
+    return storageService.query(BOOK_KEY)
+        .then(books => {
+            var idx = books.findIndex(book => book.id === bookId)
+            if (idx === 0) idx = books.length 
+            return books[idx - 1].id
+        })
+}
 
 // function _createBooks() {
 //     let books = utilService.loadFromStorage(BOOK_KEY)

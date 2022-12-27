@@ -1,7 +1,7 @@
 .book-filter {
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px;
-    background-color: var(--clr2bg);
+    background-color: var(--clr2bg-light);
 }
 
 .book-filter input {

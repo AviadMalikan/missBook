@@ -3,35 +3,35 @@ const { useNavigate } = ReactRouterDOM
 
 import { bookService } from "../services/book.service.js"
 
-export function BookAddReview({ book }) {
+export function BookAddReview({ book, onSaveReview }) {
     const [review, setReview] = useState(bookService.getEmptyReview())
     const navigate = useNavigate()
 
     function handleEvent({ target }) {
         let { value, type, name: field } = target
-        // console.log('value: ', value)
-
         value = (type === 'number') ? +value : value
-        setReview((prevReview) => ({ ...prevReview, [field]: value })
-        )
+
+        setReview((prevReview) => ({ ...prevReview, [field]: value }))
     }
 
-    function onSaveReview(ev) {
+    function onSubmitReview(ev) {
         ev.preventDefault()
-        bookService.addReview(book, review)
-            .then((book) => console.log('book: ', book))
+        if (review.fullName === '' || review.rate === '' ||
+            review.readAt === '') return
 
+        bookService.addReview(book, review)
+            .then(book => console.log('Book From submit', book))
         navigate('/book')
     }
 
     return <section className="book-add-review">
         <h2>Add Your review!</h2>
-        <form onSubmit={onSaveReview}>
+        <form onSubmit={onSubmitReview}>
             <div className="name-input">
-                <label htmlFor="userName">Your name:</label>
+                <label htmlFor="fullName">Your name:</label>
                 <input type="text"
-                    id="userName"
-                    name="txt"
+                    id="fullName"
+                    name="fullName"
                     placeholder="ex Puki..."
                     // value={}
                     onChange={handleEvent}
@@ -51,10 +51,10 @@ export function BookAddReview({ book }) {
                     />
                 </div>
                 <div className="date-input">
-                    <label htmlFor="date">When you read it ??</label>
+                    <label htmlFor="readAt">When you read it ??</label>
                     <input type="date"
-                        id="date"
-                        name="date"
+                        id="readAt"
+                        name="readAt"
                         min="2000-01-02"
                         // value={}
                         onChange={handleEvent}
